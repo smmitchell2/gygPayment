@@ -30,4 +30,13 @@ gateway.transaction.sale({
     }
   }, function (err, result) {
   });
+
+  gateway.transaction.sale({
+    amount: "10.00",
+    paymentMethodNonce: nonceFromTheClient,
+    options: {
+      submitForSettlement: true
+    }
+  }, function (err, result) {
+  });
   
