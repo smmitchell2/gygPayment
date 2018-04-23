@@ -24,19 +24,11 @@ app.post("/checkout", function (req, res) {
 //creates a transaction
 gateway.transaction.sale({
     amount: "10.00",
-    paymentMethodNonce: nonceFromTheClient,
+    paymentMethodNonce: fake-valid-no-billing-address-nonce,
     options: {
       submitForSettlement: true
     }
   }, function (err, result) {
   });
 
-  gateway.transaction.sale({
-    amount: "10.00",
-    paymentMethodNonce: nonceFromTheClient,
-    options: {
-      submitForSettlement: true
-    }
-  }, function (err, result) {
-  });
   
